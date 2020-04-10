@@ -27,30 +27,34 @@ So if you are in magento 2.2.x or magento 2.3.x to install by composer just exec
 BUT in file etc/module.xml version will be the same for all composer version, use setup_version as global version reference.
 
 # Enable Extension
-<b>For Settings: Stores > Configurat1ion > TechMitraa > StoreInfo</b>
-![image](https://raw.githubusercontent.com/neeta-tm/images/master/Configuration.PNG?token=AO2EBTUP5HCS75SSPOKG5ZS6SB5UK)
+<b>Stores > Configuration > TechMitraa > StoreInfo</b>
+![image](https://raw.githubusercontent.com/neeta-tm/images/master/Configuration.PNG)
 
 # Manage Acquired Store's Information 
 Find Acquire Store Info in Main Menu > Manage Acquired Store Information
-- Listing of all acquired Information 
-![image](https://raw.githubusercontent.com/neeta-tm/images/master/Manage%20Offline%20Store%20Information%20%20%20Magento%20Admin.png?token=AO2EBTQ6Q3W6RH3HQFA5QVK6SB5WW)
 
-<b>- Modify Inline Store Name and Address without going to detail view page.
-![image](https://raw.githubusercontent.com/neeta-tm/images/master/inline-edit-admin.png?token=AO2EBTSILYLJ27XCSBTJPJK6SB7II)
+<b>Listing of all acquired Information 
+![image](https://raw.githubusercontent.com/neeta-tm/images/master/Manage%20Offline%20Store%20Information%20%20%20Magento%20Admin.png)
 
-<b>- Manage Store's timimngs easily from admin.
-![image](https://raw.githubusercontent.com/neeta-tm/images/master/Managetime.png?token=AO2EBTTZBY3LNHACONB7XBC6SCACA)
+<b>Modify Inline Store Name and Address without going to detail view page.
+![image](https://raw.githubusercontent.com/neeta-tm/images/master/inline-edit-admin.png)
+
+<b>Manage Store's timings easily from admin.
+![image](https://raw.githubusercontent.com/neeta-tm/images/master/Managetime.png)
   
-<b>- Admin can upload custom image for particular store.</b>
-![image](https://raw.githubusercontent.com/neeta-tm/images/master/upload-image.png?token=AO2EBTTUBJSVLPEOFGNQFKK6SCAAU)
+<b>Admin can upload custom image for particular store.</b>
+![image](https://raw.githubusercontent.com/neeta-tm/images/master/upload-image.png)
+
 # Add store information in Any CMS Page
 {{block class="TechMitraa\StoreInfo\Block\StoreInfoListData" name="storeinfo.listdata" template="TechMitraa_StoreInfo::list.phtml" "}}
-![image](https://raw.githubusercontent.com/neeta-tm/images/master/Our%20Acquired%20Stores.png?token=AO2EBTR5AE3SPI5QI6YRMCS6SB2UO)
+
+![image](https://raw.githubusercontent.com/neeta-tm/images/master/Our%20Acquired%20Stores.png)
 
 # Add store information in Any CMS Page/CMS Block via widget
 {{widget type="TechMitraa\StoreInfo\Block\StoreInfoListWidget" storeinfo="Visit Our Other Stores"}}
 
-![image](https://raw.githubusercontent.com/neeta-tm/images/master/widget-storeinfo.png?token=AO2EBTTLTZXEUW2HD6RL2PS6SB7Y2)
+![image](https://raw.githubusercontent.com/neeta-tm/images/master/widget-storeinfo.png)
+
 # Contribution
 
 Want to contribute to this extension? The quickest way is to <a href="https://help.github.com/articles/about-pull-requests/">open a pull request</a> on GitHub.
