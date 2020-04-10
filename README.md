@@ -12,11 +12,15 @@ The store owners may want to add the other store's /branches details on their si
 
 <b>Composer Installation</b>
 
-We are adding a new version management to make module installation available through composer, so this is the table for reference:
+## Version
+We are adding a new version management to make module installation available through composer, so this is the table for reference: 
 
-Magento Version	Composer prefix
-2.2.X	100.0.0
-2.3.X	100.0.0
+Magento Version | Composer prefix 
+----            | ---- 
+2.2.x           | 100.0.0
+2.3.X           | 100.0.0
+
+So if you are in magento 2.2.x or magento 2.3.x to install by composer just execute: `composer require wagento/module-subscription::101.0.7`
 
 So if you are in magento 2.2.x or magento 2.3.x to install by composer just execute: composer require neeta-tm/module-storeinfo::100.0.0
 
@@ -52,6 +56,6 @@ If you encounter any problems or bugs, please <a href="https://github.com/neeta-
 # Changelog
 Based in setup_version
 
-v1.0.0
+<b>v1.0.0</b>
 
 Initial module Released
