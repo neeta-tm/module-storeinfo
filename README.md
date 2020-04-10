@@ -28,23 +28,29 @@ BUT in file etc/module.xml version will be the same for all composer version, us
 
 # Enable Extension
 <b>For Settings: Stores > Configurat1ion > TechMitraa > StoreInfo</b>
+![image](https://raw.githubusercontent.com/neeta-tm/images/master/Configuration.PNG?token=AO2EBTUP5HCS75SSPOKG5ZS6SB5UK)
 
 # Manage Acquired Store's Information 
 Find Acquire Store Info in Main Menu > Manage Acquired Store Information
-Listing of all acquired Information 
+- Listing of all acquired Information 
+![image](https://raw.githubusercontent.com/neeta-tm/images/master/Manage%20Offline%20Store%20Information%20%20%20Magento%20Admin.png?token=AO2EBTQ6Q3W6RH3HQFA5QVK6SB5WW)
 
-Modify Inline Store Name and Address without going to detail view page.
+<b>- Modify Inline Store Name and Address without going to detail view page.
+![image](https://raw.githubusercontent.com/neeta-tm/images/master/inline-edit-admin.png?token=AO2EBTSILYLJ27XCSBTJPJK6SB7II)
 
-Manage Store's timimngs easily from admin.
-
-Admin can upload custom image for particular store.
-
-# Add store information in Any CMS Page 
+<b>- Manage Store's timimngs easily from admin.
+![image](https://raw.githubusercontent.com/neeta-tm/images/master/Managetime.png?token=AO2EBTTZBY3LNHACONB7XBC6SCACA)
+  
+<b>- Admin can upload custom image for particular store.</b>
+![image](https://raw.githubusercontent.com/neeta-tm/images/master/upload-image.png?token=AO2EBTTUBJSVLPEOFGNQFKK6SCAAU)
+# Add store information in Any CMS Page
 {{block class="TechMitraa\StoreInfo\Block\StoreInfoListData" name="storeinfo.listdata" template="TechMitraa_StoreInfo::list.phtml" "}}
+![image](https://raw.githubusercontent.com/neeta-tm/images/master/Our%20Acquired%20Stores.png?token=AO2EBTR5AE3SPI5QI6YRMCS6SB2UO)
 
 # Add store information in Any CMS Page/CMS Block via widget
 {{widget type="TechMitraa\StoreInfo\Block\StoreInfoListWidget" storeinfo="Visit Our Other Stores"}}
 
+![image](https://raw.githubusercontent.com/neeta-tm/images/master/widget-storeinfo.png?token=AO2EBTTLTZXEUW2HD6RL2PS6SB7Y2)
 # Contribution
 
 Want to contribute to this extension? The quickest way is to <a href="https://help.github.com/articles/about-pull-requests/">open a pull request</a> on GitHub.
