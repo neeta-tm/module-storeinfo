@@ -1,0 +1,72 @@
+<?php
+/**
+ * @category   TechMitraa
+ * @package    TechMitraa_StoreInfo
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+
+namespace TechMitraa\StoreInfo\Ui\Component\Listing\Column;
+
+use Magento\Framework\View\Element\UiComponentFactory;
+use Magento\Framework\View\Element\UiComponent\ContextInterface;
+use Magento\Store\Model\StoreManagerInterface;
+
+class Thumbnail extends \Magento\Ui\Component\Listing\Columns\Column
+{
+    const NAME = 'image';
+    const ALT_FIELD = 'name';
+    protected $storeManager;
+    protected $assetRepo; 
+
+    /**
+     * @param ContextInterface $context
+     * @param UiComponentFactory $uiComponentFactory
+     * @param \Magento\Catalog\Helper\Image $imageHelper
+     * @param \Magento\Framework\UrlInterface $urlBuilder
+     * @param array $components
+     * @param array $data
+     */
+    public function __construct(
+        ContextInterface $context,
+        UiComponentFactory $uiComponentFactory,
+        StoreManagerInterface $storeManager,
+        \Magento\Framework\View\Asset\Repository $assetRepo,
+        array $components = [],
+        array $data = []
+    ) {
+        parent::__construct($context, $uiComponentFactory, $components, $data);
+        $this->storeManager = $storeManager;
+        $this->_assetRepo = $assetRepo;
+    }
+
+    /**
+     * Prepare Data Source
+     *
+     * @param array $dataSource
+     * @return array
+     */
+    public function prepareDataSource(array $dataSource)
+    {
+        if (isset($dataSource['data']['items'])) {
+            $fieldName = $this->getData('name');
+            $path = $this->storeManager->getStore()->getBaseUrl(
+                        \Magento\Framework\UrlInterface::URL_TYPE_MEDIA
+                    );
+            $placeHolder= $this->_assetRepo->getUrl("TechMitraa_StoreInfo::images/store-bg.jpg");
+
+            foreach ($dataSource['data']['items'] as & $item) {
+                if ($item['image']) {
+                    $item[$fieldName . '_src'] = $path.$item['image'];
+                    $item[$fieldName . '_alt'] = $item['storename'];
+                    $item[$fieldName . '_orig_src'] = $path.$item['image'];
+                }else{
+                    $item[$fieldName . '_src'] = $placeHolder;
+                    $item[$fieldName . '_alt'] = 'Place Holder';
+                    $item[$fieldName . '_orig_src'] = $placeHolder;
+                }
+            }
+        }
+
+        return $dataSource;
+    }
+}

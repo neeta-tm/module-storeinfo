@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:helloworld:Magento_Widget:etc/widget.xsd">
+   <widget class="TechMitraa\StoreInfo\Block\StoreInfoListWidget" id="storeinfo_list">
+       <label>Acquired Store Info</label>
+       <description>Information of aquired stores</description>
+       <parameters>
+           <parameter name="storeinfo" sort_order="10" visible="true" xsi:type="text">
+               <label>Acquired Store Info Page Title</label>
+           </parameter>
+       </parameters>
+   </widget>
+</widgets>

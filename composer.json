@@ -1,0 +1,20 @@
+{
+  "name": "neeta-tm/module-storeinfo",
+  "license": [
+    "proprietary"
+  ],
+  "type": "magento2-module",
+  "description": "This Module is to display the acquired store's information on the frontend with the great design",
+  "version": "100.0.0",
+  "require": {
+        "php": ">=5.6"
+  },
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "TechMitraa\\StoreInfo\\": ""
+    }
+  }
+}

@@ -1,0 +1,142 @@
+<?php $collection = $block->getStoreInfoCollection();?>
+<?php if($collection->count() > 0): ?>
+<div class="container">
+    <div class="row">
+        <h3 style="text-align:center;"><?= $block->escapeHtml($block->getData('storeinfo')) ?></h3>
+        <div class="col-sm-10 col-sm-offset-1">
+            <?php foreach ($collection as $key => $data): ?>
+                 <?php $status = $data->getStatus(); ?>
+                    <?php if(isset($status)): ?>
+                    <?php   
+                        $storeName = $data->getStorename(); 
+                        $storeAddress = $data->getStoreAddress(); 
+                        $phoneNumber = $data->getPhoneNumber(); 
+                        $img = $data->getImage();
+                        $storeDescription = $data->getStoreDescription(); 
+
+                        $monFrom = $data->getMonFrom(). " - " .$data->getMonTo(); 
+                        $tueFrom = $data->getTueFrom(). " - " .$data->getTueTo();; 
+                        $wedFrom = $data->getWedFrom(). " - " .$data->getWedTo(); 
+                        $thurFrom = $data->getThurFrom(). " - ".$data->getThurTo(); 
+                        $friFrom = $data->getFriFrom(). " - ".$data->getFriTo(); 
+                        $satFrom = $data->getSatFrom(). " - " .$data->getSatTo(); 
+                        $sunFrom = $data->getSunFrom(). " - ".$data->getSunTo(); 
+
+                        $closedText = __('Closed'); 
+                        if($data->getMonFrom()=='closed'){
+                            $monFrom = $closedText;                             
+                        }
+
+                        if($data->getTueFrom()=='closed'){
+                            $tueFrom = $closedText;                             
+                        }
+
+                        if($data->getWedFrom()=='closed'){
+                            $wedFrom = $closedText;                             
+                        }
+
+                        if($data->getThurFrom()=='closed'){
+                            $thurFrom = $closedText;                             
+                        }
+
+                        if($data->getFriFrom()=='closed'){
+                            $friFrom = $closedText;                             
+                        }
+
+
+                        if($data->getSatFrom()=='closed'){
+                            $satFrom = $closedText;                             
+                        }
+
+                        if($data->getSunFrom()=='closed'){
+                            $sunFrom = $closedText;                             
+                        }
+
+                        $imgPath = $data->getImage();
+                        if(!isset($imgPath)){
+                            $imgPath = $this->getViewFileUrl('TechMitraa_StoreInfo::images/store-bg.jpg');
+                        } else {
+                            $imgPath = $block->getMediaUrl().$imgPath = $data->getImage();
+                        }
+                    ?> 
+                <div class="col-md-4 col-sm-6">
+                    <div class="card-container">
+                        <div class="card">
+                            <div class="front">
+                                <div class="cover">
+                                    <img src="<?php echo $imgPath; ?>">
+                                </div>
+                                <div class="content">
+                                    <div class="main">
+                                        <h3 class="name"><?php echo __($storeName); ?></h3>
+                                        <p class="profession"><?php echo __($storeAddress); ?></p>
+                                        <p class="profession"><?php echo __("Phone : ". $phoneNumber); ?></p>
+
+                                        <div class="profession description" style="height: auto;"><?php echo __($storeDescription); ?></div>
+                                    </div>
+                                </div>
+                            </div> <!-- end front panel -->
+                            <div class="back">
+                                <div class="header">
+                                    <h5 class="motto"><?php echo $block->getHoursTitle();?></h5>
+                                </div>
+                                <div class="content">
+                                        <div class="stats-container">
+                                    <ul>
+                                        <li><b><?php echo __('Monday:'); ?></b>
+                                            <?php echo __($monFrom);?>
+                                        </li>
+                                        <li><b><?php echo __('Tuesday:'); ?></b>
+                                            <?php echo __($tueFrom);?>
+                                        </li>
+                                        <li><b><?php echo __('Wednesday:'); ?></b>
+                                            <?php echo __($wedFrom);?>
+                                        </li>
+                                        <li><b><?php echo __('Thursday:'); ?></b>
+                                            <?php echo __($thurFrom);?>
+                                        </li>
+                                        <li><b><?php echo __('Friday:'); ?></b>
+                                            <?php echo __($friFrom);?>
+                                        </li>
+                                        <li><b><?php echo __('Saturday:'); ?></b>
+                                            <?php echo __($satFrom);?>
+                                        </li>
+                                        <li><b><?php echo __('Sunday:'); ?></b>
+                                            <?php echo __($sunFrom);?>
+                                        </li>       
+                                    </ul>    
+                                        </div>
+                                </div>
+                            </div> <!-- end back panel -->
+                        </div> <!-- end card -->
+                    </div> 
+                </div>
+            <?php endif; ?>
+
+            <?php endforeach; ?>
+        </div> <!-- end col-sm-10 -->
+    </div> <!-- end row -->
+    <div class="space-200"></div>
+    <?php if ($block->getPagerHtml()): ?>
+        <div class="order-products-toolbar toolbar bottom"><?php echo $block->getPagerHtml(); // for display pager block which we create in block file.   ?></div>
+    <?php endif ?>
+</div>
+<?php endif; ?>
+
+<script type="text/javascript">
+    function rotateCard(btn){
+        var $card = $(btn).closest('.card-container');
+        console.log($card);
+        if($card.hasClass('hover')){
+            $card.removeClass('hover');
+        } else {
+            $card.addClass('hover');
+        }
+    }
+</script>
+
+<style type="text/css">
+    .description {
+        color: black;
+    }
+</style>
