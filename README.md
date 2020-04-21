@@ -20,9 +20,9 @@ Magento Version | Composer prefix
 2.2.x           | 100.0.0
 2.3.X           | 100.0.0
 
-So if you are in magento 2.2.x or magento 2.3.x to install by composer just execute: `composer require neeta-tm/module-storeinfo::100.0.0`
+So if you are in magento 2.2.x or magento 2.3.x to install by composer just execute: `composer require neeta-tm/module-storeinfo:100.0.0`
 
-So if you are in magento 2.2.x or magento 2.3.x to install by composer just execute: composer require neeta-tm/module-storeinfo::100.0.0
+So if you are in magento 2.2.x or magento 2.3.x to install by composer just execute: composer require neeta-tm/module-storeinfo:100.0.0
 
 BUT in file etc/module.xml version will be the same for all composer version, use setup_version as global version reference.
 
