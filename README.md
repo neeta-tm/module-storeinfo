@@ -28,32 +28,32 @@ BUT in file etc/module.xml version will be the same for all composer version, us
 
 # Enable Extension
 <b>Stores > Configuration > TechMitraa > StoreInfo</b>
-![image](https://raw.githubusercontent.com/neeta-tm/images/master/Configuration.PNG)
+![image](https://raw.githubusercontent.com/neeta-tm/images/master/acquirestore/Configuration.PNG)
 
 # Manage Acquired Store's Information 
 Find Acquire Store Info in Main Menu > Manage Acquired Store Information
 
 <b>Listing of all acquired Information 
-![image](https://raw.githubusercontent.com/neeta-tm/images/master/Manage%20Offline%20Store%20Information%20%20%20Magento%20Admin.png)
+![image](https://raw.githubusercontent.com/neeta-tm/images/master/acquirestore/Manage%20Offline%20Store%20Information%20%20%20Magento%20Admin.png)
 
 <b>Modify Inline Store Name and Address without going to detail view page.
-![image](https://raw.githubusercontent.com/neeta-tm/images/master/inline-edit-admin.png)
+![image](https://raw.githubusercontent.com/neeta-tm/images/master/acquirestore/inline-edit-admin.png)
 
 <b>Manage Store's timings easily from admin.
-![image](https://raw.githubusercontent.com/neeta-tm/images/master/Managetime.png)
+![image](https://raw.githubusercontent.com/neeta-tm/images/master/acquirestore/Managetime.png)
   
 <b>Admin can upload custom image for particular store.</b>
-![image](https://raw.githubusercontent.com/neeta-tm/images/master/upload-image.png)
+![image](https://raw.githubusercontent.com/neeta-tm/images/master/acquirestore/upload-image.png)
 
 # Add store information in Any CMS Page
 {{block class="TechMitraa\StoreInfo\Block\StoreInfoListData" name="storeinfo.listdata" template="TechMitraa_StoreInfo::list.phtml" "}}
 
-![image](https://raw.githubusercontent.com/neeta-tm/images/master/Our%20Acquired%20Stores.png)
+![image](https://raw.githubusercontent.com/neeta-tm/images/master/acquirestore/Our%20Acquired%20Stores.png)
 
 # Add store information in Any CMS Page/CMS Block via widget
 {{widget type="TechMitraa\StoreInfo\Block\StoreInfoListWidget" storeinfo="Visit Our Other Stores"}}
 
-![image](https://raw.githubusercontent.com/neeta-tm/images/master/widget-storeinfo.png)
+![image](https://raw.githubusercontent.com/neeta-tm/images/master/acquirestore/widget-storeinfo.png)
 
 # Contribution
 
